@@ -45,6 +45,7 @@
 		"new": "cpp",
 		"numbers": "cpp",
 		"streambuf": "cpp",
-		"cstring": "cpp"
+		"cstring": "cpp",
+		"fstream": "cpp"
 	}
 }

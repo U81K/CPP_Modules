@@ -5,31 +5,19 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: bgannoun <bgannoun@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/03 09:10:17 by bgannoun          #+#    #+#             */
-/*   Updated: 2023/09/18 20:03:28 by bgannoun         ###   ########.fr       */
+/*   Created: 2023/09/18 20:37:48 by bgannoun          #+#    #+#             */
+/*   Updated: 2023/09/27 15:47:27 by bgannoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Weapon.hpp"
-#include "HumanA.hpp"
-#include "HumanB.hpp"
+#include <iostream>
 
-int main()
+int main(void)
 {
-	{
-		Weapon club = Weapon("crude spiked club");
-		HumanA bob("Bob", club);
-		bob.attack();
-		club.setType("some other type of club");
-		bob.attack();
-	}
-	{
-		Weapon club = Weapon("crude spiked club");
-		HumanB jim("Jim");
-		jim.setWeapon(club);
-		jim.attack();
-		club.setType("some other type of club");
-		jim.attack();
-	}
-	return 0;
+	float a = 0.1;
+	float b = 0.2;
+	
+	float c = a + b;
+	printf("%d\n", a + b);
+	return (0);
 }

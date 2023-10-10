@@ -2,17 +2,19 @@
 #include <cstring>
 using namespace std;
 
-int main()
-{
-	std::string line = "This is a test. Test is important. This is a test, not a quiz.";
-	std::string s1 = "test";
-	std::string s2 = "zbi";
+int main() {
+    int choice = 1;
 
-	int pos = 0;
-	while ((pos = line.find(s1)) != std::string::npos)
-	{
-		line = line.substr(0, pos) + s2 + line.substr(pos + s1.length());
-	}
-	std::cout << line << std::endl;
+    switch (choice) {
+        case 1:
+            std::cout << "Choice is 1" << std::endl;
+        case 2:
+            std::cout << "Choice is 2" << std::endl;
+        case 5:
+            std::cout << "Choice is 3" << std::endl;
+        // default:
+        //     std::cout << "Invalid choice" << std::endl;
+    }
 
+    return 0;
 }

@@ -6,7 +6,7 @@
 /*   By: bgannoun <bgannoun@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/03 06:45:32 by bgannoun          #+#    #+#             */
-/*   Updated: 2023/09/03 06:59:08 by bgannoun         ###   ########.fr       */
+/*   Updated: 2023/10/11 12:37:06 by bgannoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ void	Zombie::announce(void)
 Zombie* newZombie(std::string name)
 {
 	Zombie *newZombie = new Zombie;
-	newZombie->name = name;
+	(void)name;
+	// newZombie->name = name;
 	return (newZombie);
 }

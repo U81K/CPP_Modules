@@ -6,13 +6,14 @@
 #    By: bgannoun <bgannoun@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/07 18:11:55 by bgannoun          #+#    #+#              #
-#    Updated: 2023/09/07 18:14:49 by bgannoun         ###   ########.fr        #
+#    Updated: 2023/10/11 15:57:06 by bgannoun         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+CC		=	c++
 NAME	=	Harl
 RM		=	rm -rf
-FLAGS	=	-Wall -Wextra -Werror -std=c++98
+CXXFLAGS	=	-Wall -Wextra -Werror -std=c++98
 OBJS	=	$(SRCS:.cpp=.o)
 SRCS	=	main.cpp \
 			Harl.cpp

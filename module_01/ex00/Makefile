@@ -6,16 +6,17 @@
 #    By: bgannoun <bgannoun@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/03 03:49:14 by bgannoun          #+#    #+#              #
-#    Updated: 2023/09/03 04:47:57 by bgannoun         ###   ########.fr        #
+#    Updated: 2023/10/11 12:17:04 by bgannoun         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+CC		=	c++
 NAME	=	BraiiiiiiinnnzzzZ
-CFLAGS	=	-Wall -Wextra -Werror -std=c++98
+CXXFLAGS	=	-Wall -Wextra -Werror -std=c++98
 RM		=	-rm -rf
 SRCS	=	main.cpp \
-			newZombie.cpp \
-			randomChump.cpp \
+			NewZombie.cpp \
+			RandomChump.cpp \
 			Zombie.cpp
 OBJS	=	$(SRCS:.cpp=.o)
 

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   contact.hpp                                        :+:      :+:    :+:   */
+/*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bgannoun <bgannoun@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/31 08:27:13 by bgannoun          #+#    #+#             */
-/*   Updated: 2023/08/31 08:36:01 by bgannoun         ###   ########.fr       */
+/*   Created: 2023/10/11 10:47:14 by bgannoun          #+#    #+#             */
+/*   Updated: 2023/10/14 12:48:43 by bgannoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,8 @@
 #define CONTACT_HPP
 
 #include <iostream>
-
-class Contact
-{
-	public:
-	std::string first_name;
-	std::string last_name;
-	std::string nickname;
-	std::string number;
-	std::string darkest_secret;
-};
+#include <sstream>
+#include "Contacts.hpp"
+#include "PhoneBook.hpp"
 
 #endif

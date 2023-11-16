@@ -6,12 +6,13 @@
 #    By: bgannoun <bgannoun@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/03 06:44:56 by bgannoun          #+#    #+#              #
-#    Updated: 2023/09/03 06:56:34 by bgannoun         ###   ########.fr        #
+#    Updated: 2023/10/11 12:34:46 by bgannoun         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+CC		=	c++
 NAME	=	horde_of_Zombies
-CFLAGS	=	-Wall -Wextra -Werror -std=c++98
+CXXFLAGS	=	-Wall -Wextra -Werror -std=c++98
 RM		=	-rm -rf
 SRCS	=	main.cpp \
 			Zombie.cpp \

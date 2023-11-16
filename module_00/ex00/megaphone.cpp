@@ -6,7 +6,7 @@
 /*   By: bgannoun <bgannoun@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/21 00:44:46 by bgannoun          #+#    #+#             */
-/*   Updated: 2023/08/31 08:46:50 by bgannoun         ###   ########.fr       */
+/*   Updated: 2023/10/11 10:10:54 by bgannoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 
 int	main(int ac, char **av)
 {
-	int i;
-	int j;
+	std::string arg;
+	int 		i;
+	int 		j;
 	
 	if (ac < 2)
 	{
@@ -26,12 +27,11 @@ int	main(int ac, char **av)
 	while (i < ac)
 	{
 		j = 0;
-		while (av[i][j])
+		arg = av[i];
+		while (arg[j])
 		{
-			if (av[i][j] >= 'a' && av[i][j] <= 'z')
-				std::cout << (char)(av[i][j] - 32);
-			else
-				std::cout << av[i][j];
+			arg[j] = std::toupper(arg[j]);
+			std::cout << arg[j];
 			j++;
 		}
 		i++;

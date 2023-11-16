@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Harl.hpp                                           :+:      :+:    :+:   */
+/*   Contacts.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bgannoun <bgannoun@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/07 19:42:53 by bgannoun          #+#    #+#             */
-/*   Updated: 2023/09/08 09:23:29 by bgannoun         ###   ########.fr       */
+/*   Created: 2023/08/31 08:27:13 by bgannoun          #+#    #+#             */
+/*   Updated: 2023/10/11 11:44:52 by bgannoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HARL_HPP
-#define HARL_HPP
+#ifndef CONTACTS_HPP
+#define CONTACTS_HPP
 
-#include <iostream>
-
-class Harl
+class Contacts
 {
 		private:
-	void debug( void );
-	void info( void );
-	void warning( void );
-	void error( void );
+	std::string first_name;
+	std::string last_name;
+	std::string nickname;
+	std::string number;
+	std::string darkest_secret;
 		public:
-	void complain(std::string level);
+	void	set_con(std::string f_name, std::string l_name, std::string n_name, std::string num, std::string dark_s);
+	std::string get_f();
+	std::string get_l();
+	std::string get_n();
+	std::string get_num();
+	std::string get_dark();
 };
-
-typedef void (Harl::*funcs) (void); //declaration of the pointer
 
 #endif

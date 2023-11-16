@@ -6,7 +6,7 @@
 /*   By: bgannoun <bgannoun@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/03 09:11:52 by bgannoun          #+#    #+#             */
-/*   Updated: 2023/09/07 08:28:09 by bgannoun         ###   ########.fr       */
+/*   Updated: 2023/10/11 13:31:02 by bgannoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,7 @@ class HumanB
 	Weapon *weapon;
 		public:
 	HumanB(std::string Name) : name(Name) {}
-	void setWeapon(Weapon &wpn)
-	{
-		weapon = &wpn;
-	}
+	void setWeapon(Weapon &wpn);
 	void attack();
 };
 

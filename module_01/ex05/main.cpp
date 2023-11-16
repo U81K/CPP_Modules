@@ -6,7 +6,7 @@
 /*   By: bgannoun <bgannoun@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 18:12:09 by bgannoun          #+#    #+#             */
-/*   Updated: 2023/09/07 19:36:45 by bgannoun         ###   ########.fr       */
+/*   Updated: 2023/10/11 15:56:38 by bgannoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ int main(void)
 	{
 		std::cout << "enter a level : ";
 		getline(std::cin, input);
+		std::cin.clear();
 		harl.complain(input);
 	}
 	return (0);

@@ -6,13 +6,14 @@
 #    By: bgannoun <bgannoun@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/03 08:12:31 by bgannoun          #+#    #+#              #
-#    Updated: 2023/09/03 08:17:41 by bgannoun         ###   ########.fr        #
+#    Updated: 2023/10/11 13:23:20 by bgannoun         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+CC		=	c++
 NAME	=	BRAIN
 RM		=	-rm -rf
-CFLAGS	=	-Wall -Wextra -Werror -std=c++98
+CXXFLAGS	=	-Wall -Wextra -Werror -std=c++98
 SRCS	=	main.cpp
 OBJS	=	$(SRCS:.cpp=.o)
 

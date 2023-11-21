@@ -5,12 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: bgannoun <bgannoun@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/03 06:45:44 by bgannoun          #+#    #+#             */
-/*   Updated: 2023/09/03 08:10:27 by bgannoun         ###   ########.fr       */
+/*   Created: 2023/11/18 08:10:13 by bgannoun          #+#    #+#             */
+/*   Updated: 2023/11/18 08:14:12 by bgannoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "zombieHorde.hpp"
 
 Zombie* zombieHorde(int N, std::string name)
 {
@@ -19,6 +19,9 @@ Zombie* zombieHorde(int N, std::string name)
 	i = 0;
 	Zombie *Horde = new Zombie[N];
 	while (i < N)
-		Horde[i++].name = name;
+	{
+		Horde[i].set_name(name);
+		i++;
+	}
 	return (Horde);
 }

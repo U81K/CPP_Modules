@@ -1,20 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   newZombie.cpp                                      :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bgannoun <bgannoun@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/03 03:51:19 by bgannoun          #+#    #+#             */
-/*   Updated: 2023/09/03 04:45:37 by bgannoun         ###   ########.fr       */
+/*   Created: 2023/11/21 12:20:57 by bgannoun          #+#    #+#             */
+/*   Updated: 2023/11/21 12:46:25 by bgannoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef HARL_HPP
+#define HARL_HPP
 
-Zombie* newZombie(std::string name)
+#include <iostream>
+
+class Harl
 {
-	Zombie *newZombie = new Zombie;
-	newZombie->name = name;
-	return (newZombie);
-}
+		private:
+	void debug( void );
+	void info( void );
+	void warning( void );
+	void error( void );
+		public:
+	void complain(std::string level);
+};
+
+typedef void (Harl::*funcs) (void);
+
+#endif

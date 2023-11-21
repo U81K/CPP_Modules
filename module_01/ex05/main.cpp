@@ -6,23 +6,19 @@
 /*   By: bgannoun <bgannoun@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 18:12:09 by bgannoun          #+#    #+#             */
-/*   Updated: 2023/10/11 15:56:38 by bgannoun         ###   ########.fr       */
+/*   Updated: 2023/11/21 12:19:12 by bgannoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
 
-int main(void)
+int main(int ac, char **av)
 {
-	std::string input;
-	Harl harl;
-	
-	while (input.compare("EXIT"))
+	if (ac == 2)
 	{
-		std::cout << "enter a level : ";
-		getline(std::cin, input);
-		std::cin.clear();
-		harl.complain(input);
+		std::string input;
+		Harl harl;
+		harl.complain(av[1]);
 	}
 	return (0);
 }

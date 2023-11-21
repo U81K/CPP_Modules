@@ -6,7 +6,7 @@
 /*   By: bgannoun <bgannoun@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 18:12:24 by bgannoun          #+#    #+#             */
-/*   Updated: 2023/10/11 16:35:54 by bgannoun         ###   ########.fr       */
+/*   Updated: 2023/11/21 12:47:55 by bgannoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	Harl::complain(std::string level)
 {
 	int i = 0;
 	std::string levs[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
-	funcs fun[] = { &Harl::debug, &Harl::info, &Harl::warning, &Harl::error};// Assign the member functions to the pointer
+	funcs fun[] = { &Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
 	while (i < 4 && levs[i].compare(level))
 		i++;
 	if (i < 4)

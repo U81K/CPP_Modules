@@ -6,11 +6,13 @@
 /*   By: bgannoun <bgannoun@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/03 09:10:49 by bgannoun          #+#    #+#             */
-/*   Updated: 2023/10/11 13:30:55 by bgannoun         ###   ########.fr       */
+/*   Updated: 2023/11/19 11:38:10 by bgannoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanB.hpp"
+
+HumanB::HumanB(std::string Name) : name(Name) {}
 
 void	HumanB::attack()
 {

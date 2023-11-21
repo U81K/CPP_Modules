@@ -6,26 +6,33 @@
 /*   By: bgannoun <bgannoun@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/03 06:45:32 by bgannoun          #+#    #+#             */
-/*   Updated: 2023/10/11 12:37:06 by bgannoun         ###   ########.fr       */
+/*   Updated: 2023/11/18 08:06:15 by bgannoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
+Zombie::Zombie()
+{
+	name = "";
+}
+	
+Zombie::Zombie(std::string z_name)
+{
+	name = z_name;
+}
+
 Zombie::~Zombie()
 {
-	std::cout << this->name << " has died" << std::endl;
+	std::cout << name << " has died" << std::endl;
 }
 
 void	Zombie::announce(void)
 {
-	std::cout << this->name << ":" <<  " BraiiiiiiinnnzzzZ..." << std::endl;
+	std::cout << name << ":" <<  " BraiiiiiiinnnzzzZ..." << std::endl;
 }
 
-Zombie* newZombie(std::string name)
+void Zombie::set_name(std::string z_name)
 {
-	Zombie *newZombie = new Zombie;
-	(void)name;
-	// newZombie->name = name;
-	return (newZombie);
+	name = z_name;
 }

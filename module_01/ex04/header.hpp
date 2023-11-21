@@ -6,7 +6,7 @@
 /*   By: bgannoun <bgannoun@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 18:07:01 by bgannoun          #+#    #+#             */
-/*   Updated: 2023/10/11 15:15:25 by bgannoun         ###   ########.fr       */
+/*   Updated: 2023/11/20 15:06:38 by bgannoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ class	ReadWrite
 		public:
 	ReadWrite(char *in, char *av2, char *av3);
 	void writing(std::ifstream &in, std::ofstream &out);
+	int compare();
 	void	redirection();
 };
 

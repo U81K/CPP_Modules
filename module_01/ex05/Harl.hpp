@@ -6,7 +6,7 @@
 /*   By: bgannoun <bgannoun@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 18:12:37 by bgannoun          #+#    #+#             */
-/*   Updated: 2023/10/11 16:30:32 by bgannoun         ###   ########.fr       */
+/*   Updated: 2023/11/21 12:47:49 by bgannoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,6 @@ class Harl
 	void complain(std::string level);
 };
 
-typedef void (Harl::*funcs) (void); //declaration of the pointer
+typedef void (Harl::*funcs) (void);
 
 #endif

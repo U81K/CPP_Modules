@@ -6,12 +6,19 @@
 /*   By: bgannoun <bgannoun@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 10:23:20 by bgannoun          #+#    #+#             */
-/*   Updated: 2023/10/11 15:15:18 by bgannoun         ###   ########.fr       */
+/*   Updated: 2023/11/20 17:36:13 by bgannoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.hpp"
 
+int ReadWrite::compare()
+{
+	if (s1.compare(s2) == 0)
+		return (0);
+	return (1);
+}
+	
 void	ReadWrite::redirection()
 {
 	std::ifstream in(infile);
@@ -36,14 +43,22 @@ ReadWrite::ReadWrite(char *in, char *av2, char *av3)
 void ReadWrite::writing(std::ifstream &in, std::ofstream &out)
 {
 	std::string line;
-	while (getline(in, line))
+	int is_eq =  compare();
+
+	if (is_eq != 0)
 	{
-		int pos = 0;
-		while ((const unsigned long)(pos = line.find(s1, pos)) != std::string::npos)
+		while (getline(in, line))
 		{
-			line = line.substr(0, pos) + s2 + line.substr(pos + s1.length());
+			std::size_t pos = 0;
+			while ((pos = line.find(s1, pos)) != std::string::npos)
+				line = line.substr(0, pos) + s2 + line.substr(pos + s1.length());
+			out << line << std::endl;
 		}
-		out << line << std::endl;
+	}
+	else
+	{
+		while (getline(in, line))
+			out << line << std::endl;
 	}
 	
 }

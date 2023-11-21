@@ -5,21 +5,21 @@
 #                                                     +:+ +:+         +:+      #
 #    By: bgannoun <bgannoun@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/09/03 03:49:14 by bgannoun          #+#    #+#              #
-#    Updated: 2023/11/16 11:55:47 by bgannoun         ###   ########.fr        #
+#    Created: 2023/11/21 12:19:53 by bgannoun          #+#    #+#              #
+#    Updated: 2023/11/21 12:31:32 by bgannoun         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC		=	c++
-NAME	=	BraiiiiiiinnnzzzZ
+NAME	=	harlFilter
+RM		=	rm -rf
 CXXFLAGS	=	-Wall -Wextra -Werror -std=c++98
-RM		=	-rm -rf
-SRCS	=	main.cpp \
-			Zombie.cpp
 OBJS	=	$(SRCS:.cpp=.o)
+SRCS	=	main.cpp \
+			Harl.cpp
 
 $(NAME)	:	$(OBJS)
-	c++ $(CFLAGS) $(OBJS) -o $(NAME)
+	c++ $(FLAGS) $(OBJS) -o $(NAME)
 
 all		:	$(NAME)
 

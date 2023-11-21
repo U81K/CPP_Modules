@@ -6,7 +6,7 @@
 /*   By: bgannoun <bgannoun@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/03 03:51:51 by bgannoun          #+#    #+#             */
-/*   Updated: 2023/09/03 04:46:49 by bgannoun         ###   ########.fr       */
+/*   Updated: 2023/11/16 12:00:21 by bgannoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,9 @@ class Zombie
 		private:
 	std::string name;
 		public:
-	void announce(void);
-	friend Zombie* newZombie(std::string name);
-	friend void randomChump(std::string name);
+	Zombie(std::string z_name);
 	~Zombie();
+	void announce(void);
 };
-
-Zombie* newZombie(std::string name);
-void randomChump(std::string name);
 
 #endif

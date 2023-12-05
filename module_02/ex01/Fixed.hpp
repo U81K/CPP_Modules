@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: bgannoun <bgannoun@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/18 20:38:12 by bgannoun          #+#    #+#             */
-/*   Updated: 2023/11/29 21:01:28 by bgannoun         ###   ########.fr       */
+/*   Created: 2023/11/29 21:03:38 by bgannoun          #+#    #+#             */
+/*   Updated: 2023/12/05 10:26:46 by bgannoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,17 @@
 
 #include <iostream>
 
-static const int fractional_bits = 8;
-
 class Fixed
 {
 	private:
 		int value;
-		static const int fractional_bits;
+		static const int fractional_bits = 8;
 	public:
 		Fixed();
+		Fixed(const int i);
+		Fixed(const float f);
+		int toInt() const;
+		float toFloat() const;
 		Fixed(const Fixed&other);
 		Fixed &operator=(const Fixed &other);
 		~Fixed();
@@ -31,4 +33,7 @@ class Fixed
 		void setRawBits(int const raw);
 };
 
+std::ostream& operator<<(std::ostream& os, const Fixed& classs);
+
+int ft_power(int base, int exp);
 #endif

@@ -5,22 +5,22 @@
 #                                                     +:+ +:+         +:+      #
 #    By: bgannoun <bgannoun@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/11/29 21:03:02 by bgannoun          #+#    #+#              #
-#    Updated: 2023/12/06 16:51:04 by bgannoun         ###   ########.fr        #
+#    Created: 2023/12/07 18:08:46 by bgannoun          #+#    #+#              #
+#    Updated: 2023/12/07 18:15:43 by bgannoun         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	a.out
-RM		=	rm -rf
+NAME		=	a.out
+RM			=	rm -rf
 CXXFLAGS	=	-Wall -Wextra -Werror -std=c++98
-SRCS	=	Fixed.cpp main.cpp
-INC		=	Fixed.hpp
-OBJS	=	$(SRCS:.cpp=.o)
+SRCS		=	main.cpp ClapTrap.cpp
+INC			=	ClapTrap.hpp
+OBJS		=	$(SRCS:.cpp=.o)
 
 all		:	$(NAME)
 
-$(NAME)	: $(OBJS) $(INC)
-	c++ $(CFLAGS) $(OBJS) -o $(NAME)
+$(NAME) : $(OBJS) $(INC)
+	c++	$(CFLAGS) $(OBJS) -o $(NAME)
 
 clean	:
 	$(RM) $(OBJS)
@@ -28,4 +28,4 @@ clean	:
 fclean	:	clean
 	$(RM) $(NAME)
 
-re		: fclean all
+re		:	fclean all

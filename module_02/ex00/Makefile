@@ -6,24 +6,21 @@
 #    By: bgannoun <bgannoun@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/18 20:37:31 by bgannoun          #+#    #+#              #
-#    Updated: 2023/12/05 21:53:21 by bgannoun         ###   ########.fr        #
+#    Updated: 2023/12/06 16:45:56 by bgannoun         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	a.out
 RM		=	rm -rf
-FLAGS	=	-Wall -Wextra -Werror -std=c++98
+CXXFLAGS	=	-Wall -Wextra -Werror -std=c++98
 SRCS	=	Fixed.cpp main.cpp
-INC		= 	Fixed.hpp
+INC		=	Fixed.hpp
 OBJS	=	$(SRCS:.cpp=.o)
 
 all		:	$(NAME)
 
-%.o: %.cpp
-	c++ $(FLAGS) $< -c -o $@
-
 $(NAME)	: $(OBJS) $(INC)
-	c++ $(FLAGS) $(OBJS) -o $(NAME)
+	c++ $(CFLAGS) $(OBJS) -o $(NAME)
 
 clean	:
 	$(RM) $(OBJS)

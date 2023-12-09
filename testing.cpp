@@ -6,61 +6,52 @@
 /*   By: bgannoun <bgannoun@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 11:39:04 by bgannoun          #+#    #+#             */
-/*   Updated: 2023/11/26 21:11:04 by bgannoun         ###   ########.fr       */
+/*   Updated: 2023/12/09 19:28:03 by bgannoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 
-class String
+class base
 {
-private:
-	std::string *strptr;
-public:
-	void printing()
-	{
-		if (strptr)
-			std::cout << *strptr << std::endl;
-	}
-	String()
-	{
-		strptr = nullptr;
-	}
-	void	set_str(std::string new_str)
-	{
-		strptr = new std::string(new_str);
-	}
-	String(const String& other)/// String copy_str = str;
-	{
-		if (other.strptr)
-			strptr = new std::string(*other.strptr);
-		else
-			strptr = nullptr;
-	}
-	String &operator=(const String other)
-	{
-		std::cout << this << std::endl;
-		return(*this);
-	}
-	~String()
-	{
-		if (strptr)
-			delete strptr;
-	}
+	public:
+		int _id;
+		base()
+		{
+			std::cout << "base constructor called\n";
+			_id = 0;
+		}
+		base(int id) : _id(id) {}
+		void get_id()
+		{
+			std::cout << _id << std::endl;
+		}
 };
 
+class Derived : public base
+{
+	public:
+		int m_cost;
+		Derived()
+		{
+			std::cout << "derived constructor called\n";
+			m_cost = 0;
+			_id = 0;
+		}
+		Derived(int cost, int id) : m_cost(cost){
+			_id = id;
+		}
+		void get_cost()
+		{
+			std::cout << m_cost << std::endl;
+		}
+};
 
 int main(void)
 {
-	String str;
-
-	str.printing();
-	str.set_str("hello");
-	str.printing();
-	String copy_str(str); //copy constructor
-	// copy_str.set_str("world");
-	copy_str.printing();
-	String ca_str = str; //copy assignment contructor
-	ca_str.printing();
+	// base b;
+	Derived d(10, 1);
+	d.get_id();
+	d.get_cost();
 	return (0);
 }

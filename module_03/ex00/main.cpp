@@ -1,34 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bgannoun <bgannoun@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/18 20:38:12 by bgannoun          #+#    #+#             */
-/*   Updated: 2023/12/06 16:45:39 by bgannoun         ###   ########.fr       */
+/*   Created: 2023/12/07 18:09:02 by bgannoun          #+#    #+#             */
+/*   Updated: 2023/12/08 15:02:41 by bgannoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_HPP
-#define FIXED_HPP
+#include "ClapTrap.hpp"
 
-#include <iostream>
-
-static const int fractional_bits = 8;
-
-class Fixed
+int main(void)
 {
-	private:
-		int value;
-		static const int fractional_bits;
-	public:
-		Fixed();
-		Fixed(const Fixed&other);
-		Fixed &operator=(const Fixed &other);
-		~Fixed();
-		int getRawBits() const;
-		void setRawBits(int const raw);
-};
-
-#endif
+	ClapTrap test("test");
+	test.attack("foo");
+	test.beRepaired(10);
+	test.takeDamage(5);
+	return (0);
+}

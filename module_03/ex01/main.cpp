@@ -1,34 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bgannoun <bgannoun@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/18 20:38:12 by bgannoun          #+#    #+#             */
-/*   Updated: 2023/12/06 16:45:39 by bgannoun         ###   ########.fr       */
+/*   Created: 2023/12/08 15:00:52 by bgannoun          #+#    #+#             */
+/*   Updated: 2023/12/08 17:17:59 by bgannoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_HPP
-#define FIXED_HPP
+#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
-#include <iostream>
-
-static const int fractional_bits = 8;
-
-class Fixed
+int main(void)
 {
-	private:
-		int value;
-		static const int fractional_bits;
-	public:
-		Fixed();
-		Fixed(const Fixed&other);
-		Fixed &operator=(const Fixed &other);
-		~Fixed();
-		int getRawBits() const;
-		void setRawBits(int const raw);
-};
-
-#endif
+	// ClapTrap clap("clap");
+	// clap.attack("foo");
+	// clap.beRepaired(10);
+	// clap.takeDamage(5);
+	// ScavTrap ss("sw");
+	// ClapTrap *nn = new ScavTrap("k");
+	// nn->attack("target");
+	// delete(nn);
+	// return (0);
+}

@@ -1,37 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bgannoun <bgannoun@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/08 15:01:39 by bgannoun          #+#    #+#             */
-/*   Updated: 2023/12/11 17:43:50 by bgannoun         ###   ########.fr       */
+/*   Created: 2023/12/16 14:55:43 by bgannoun          #+#    #+#             */
+/*   Updated: 2023/12/19 17:31:08 by bgannoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ClapTrap_HPP
-#define ClapTrap_HPP
+#ifndef Dog_hpp
+#define Dog_hpp
 
 #include <iostream>
+#include "Animal.hpp"
+#include "Brain.hpp"
 
-class ClapTrap
+class Dog : public Animal
 {
-	protected:
-		std::string name;
-		int hit_p;
-		int energy_p;
-		int attack_d;
+	private:
+		Brain *dogsbrain;
 	public:
-		ClapTrap();
-		ClapTrap(std::string init_name);
-		ClapTrap(const ClapTrap &other);
-		ClapTrap &operator=(const ClapTrap &other);
-		~ClapTrap();
-		
-		void attack(const std::string& target);
-		void takeDamage(unsigned int amount);
-		void beRepaired(unsigned int amount);
+		Dog();
+		Dog(const Dog &other);
+		Dog &operator=(const Dog &other);
+		~Dog();
+		void makeSound() const;
+		void fill();
+		void print();
 };
 
 #endif

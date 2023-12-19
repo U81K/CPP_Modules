@@ -5,16 +5,16 @@
 #                                                     +:+ +:+         +:+      #
 #    By: bgannoun <bgannoun@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/12/08 15:00:35 by bgannoun          #+#    #+#              #
-#    Updated: 2023/12/11 18:30:21 by bgannoun         ###   ########.fr        #
+#    Created: 2023/12/12 14:21:27 by bgannoun          #+#    #+#              #
+#    Updated: 2023/12/16 16:58:29 by bgannoun         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		=	a.out
 RM			=	rm -rf
 CXXFLAGS	=	-Wall -Wextra -Werror -std=c++98
-SRCS		=	main.cpp ClapTrap.cpp ScavTrap.cpp
-INC			=	ClapTrap.hpp ScavTrap.hpp main.cpp
+SRCS		=	main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp
+INC			=	Animal.hpp Dog.hpp Cat.hpp WrongAnimal.hpp WrongCat.hpp
 OBJS		=	$(SRCS:.cpp=.o)
 
 all		:	$(NAME)

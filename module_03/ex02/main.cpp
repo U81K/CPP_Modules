@@ -5,21 +5,18 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: bgannoun <bgannoun@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/08 15:00:52 by bgannoun          #+#    #+#             */
-/*   Updated: 2023/12/11 18:30:51 by bgannoun         ###   ########.fr       */
+/*   Created: 2023/12/11 18:15:11 by bgannoun          #+#    #+#             */
+/*   Updated: 2023/12/11 19:10:28 by bgannoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int main(void)
-{ 
-	ScavTrap scav("mehdi");
-	
-	scav.attack("enemey");
-	scav.takeDamage(10);
-	scav.beRepaired(50);
-	scav.attack("enemey");
+{
+	FragTrap f("test");
+	f.highFivesGuys();
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: bgannoun <bgannoun@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 14:58:12 by bgannoun          #+#    #+#             */
-/*   Updated: 2023/12/19 18:12:19 by bgannoun         ###   ########.fr       */
+/*   Updated: 2023/12/19 18:27:20 by bgannoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,9 @@
 #include <iostream>
 #include "Animal.hpp"
 #include "Brain.hpp"
+#include "AAnimal.hpp"
 
-class Cat : public Animal
+class Cat : public AAnimal
 {
 	private:
 		Brain *catsbrain;

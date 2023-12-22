@@ -5,27 +5,27 @@
 #                                                     +:+ +:+         +:+      #
 #    By: bgannoun <bgannoun@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/12/12 14:21:27 by bgannoun          #+#    #+#              #
-#    Updated: 2023/12/20 09:57:08 by bgannoun         ###   ########.fr        #
+#    Created: 2023/12/20 09:17:15 by bgannoun          #+#    #+#              #
+#    Updated: 2023/12/20 09:55:16 by bgannoun         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		=	a.out
 RM			=	rm -rf
 CXXFLAGS	=	-Wall -Wextra -Werror -std=c++98
-SRCS		=	main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
-INC			=	Animal.hpp Dog.hpp Cat.hpp WrongAnimal.hpp WrongCat.hpp Brain.hpp
+SRCS		=	main.cpp Bureaucrat.cpp
 OBJS		=	$(SRCS:.cpp=.o)
+INC			=	Bureaucrat.hpp
 
-all		:	$(NAME)
+all			:	$(NAME)
 
-$(NAME) : $(OBJS) $(INC)
-	c++	$(CXXFLAGS) $(OBJS) -o $(NAME)
+$(NAME)		:	$(OBJS) $(INC)
+	c++ $(CXXFLAGS) $(OBJS) -o $(NAME)
 
-clean	:
+clean		:	
 	$(RM) $(OBJS)
 
-fclean	:	clean
+fclean		:	clean
 	$(RM) $(NAME)
 
-re		:	fclean all
+re			:	fclean all

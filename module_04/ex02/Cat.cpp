@@ -6,13 +6,13 @@
 /*   By: bgannoun <bgannoun@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 14:58:52 by bgannoun          #+#    #+#             */
-/*   Updated: 2023/12/19 18:13:01 by bgannoun         ###   ########.fr       */
+/*   Updated: 2023/12/19 18:27:03 by bgannoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
-Cat::Cat() : Animal("Cat"){
+Cat::Cat() : AAnimal("Cat"){
 	catsbrain = new Brain();
 	std::cout << "Cat constructor" << std::endl;
 }

@@ -5,42 +5,33 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: bgannoun <bgannoun@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/12 14:21:43 by bgannoun          #+#    #+#             */
-/*   Updated: 2023/12/19 18:14:40 by bgannoun         ###   ########.fr       */
+/*   Created: 2023/12/20 09:17:51 by bgannoun          #+#    #+#             */
+/*   Updated: 2023/12/22 15:41:33 by bgannoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
-#include "Dog.hpp"
-#include "Cat.hpp"
-#include "WrongCat.hpp"
+#include <iostream>
+#include "Bureaucrat.hpp"
 
 int main(void)
 {
-	// const Animal* j = new Dog();
-	// const Animal* i = new Cat();
-	// delete j;
-	// delete i;
-
-	// Animal *animals[4];
-	
-	// for (int i = 0; i < 2; ++i){
-	// 	animals[i] = new Dog();
-	// }
-	
-	// for (int i = 2; i < 4; ++i){
-	// 	animals[i] = new Cat();
-	// }
-	// std::cout << "-----------------\n";
-	// for (int i = 0; i < 4; ++i){
-	// 	delete animals[i];
-	// }
-
-	// Cat a;
-	// a.fill();
-
-	// Cat b(a);
-	// b.print();
+	try
+	{
+		Bureaucrat a("one", 1);
+		std::cout << a;
+		// a.increment();
+		// std::cout << a;
+		// a.increment();
+		
+		Bureaucrat b("two", 150);
+		std::cout << b;
+		// b.decrement();
+		// std::cout << b;
+	}
+	catch(std::exception &e)
+	{
+		std::cout << e.what() << std::endl;
+	}
 	
 	return (0);
 }

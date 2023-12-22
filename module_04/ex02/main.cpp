@@ -6,7 +6,7 @@
 /*   By: bgannoun <bgannoun@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 14:21:43 by bgannoun          #+#    #+#             */
-/*   Updated: 2023/12/19 18:14:40 by bgannoun         ###   ########.fr       */
+/*   Updated: 2023/12/21 12:52:32 by bgannoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include "Dog.hpp"
 #include "Cat.hpp"
 #include "WrongCat.hpp"
+#include "AAnimal.hpp"
 
 int main(void)
 {
@@ -44,3 +45,4 @@ int main(void)
 	
 	return (0);
 }
+

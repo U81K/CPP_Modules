@@ -6,7 +6,7 @@
 #    By: bgannoun <bgannoun@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/12 14:21:27 by bgannoun          #+#    #+#              #
-#    Updated: 2023/12/16 16:58:29 by bgannoun         ###   ########.fr        #
+#    Updated: 2023/12/20 09:57:00 by bgannoun         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ OBJS		=	$(SRCS:.cpp=.o)
 all		:	$(NAME)
 
 $(NAME) : $(OBJS) $(INC)
-	c++	$(CFLAGS) $(OBJS) -o $(NAME)
+	c++	$(CXXFLAGS) $(OBJS) -o $(NAME)
 
 clean	:
 	$(RM) $(OBJS)

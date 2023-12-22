@@ -1,34 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bgannoun <bgannoun@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/16 14:58:12 by bgannoun          #+#    #+#             */
-/*   Updated: 2023/12/19 18:12:19 by bgannoun         ###   ########.fr       */
+/*   Created: 2023/12/16 18:15:31 by bgannoun          #+#    #+#             */
+/*   Updated: 2023/12/19 17:33:13 by bgannoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef Cat_hpp
-#define Cat_hpp
+#ifndef Brain_hpp
+#define Brain_hpp
 
 #include <iostream>
-#include "Animal.hpp"
-#include "Brain.hpp"
 
-class Cat : public Animal
+class Brain
 {
-	private:
-		Brain *catsbrain;
+	protected:
+		std::string ideas[100];
 	public:
-		Cat();
-		Cat(const Cat &other);
-		Cat &operator=(const Cat &other);
-		~Cat();
-		void makeSound() const;
-		void fill();
-		void print();
+		Brain();
+		Brain(const Brain &other);
+		Brain &operator=(const Brain &other);
+		~Brain();
+		void fill_ideas();
+		void printing();
 };
 
 #endif

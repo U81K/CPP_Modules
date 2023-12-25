@@ -6,7 +6,7 @@
 /*   By: bgannoun <bgannoun@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/20 09:18:04 by bgannoun          #+#    #+#             */
-/*   Updated: 2023/12/21 17:45:34 by bgannoun         ###   ########.fr       */
+/*   Updated: 2023/12/25 15:10:22 by bgannoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,4 +76,14 @@ std::ostream &operator<<(std::ostream &os, const Bureaucrat &obj)
 {
 	os << obj.getName() << ", bureaucrat grade " << obj.getGrade() << "." << std::endl;
 	return (os);
+}
+
+void Bureaucrat::signForm(Form &f)
+{
+	try{
+		f.beSigned(*this);
+	}
+	catch(const std::exception& e){
+		std::cout << name << " couldn’t sign " << f.getName() << " because " << e.what() << std::endl;
+	}
 }

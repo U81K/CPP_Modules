@@ -6,7 +6,7 @@
 /*   By: bgannoun <bgannoun@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 11:39:04 by bgannoun          #+#    #+#             */
-/*   Updated: 2023/12/19 17:46:41 by bgannoun         ###   ########.fr       */
+/*   Updated: 2024/01/01 15:55:14 by bgannoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,11 +41,13 @@ class Rectangle : public shape
 
 int main ()
 {
-	Rectangle r(5, 5);
-	shape *pr = &r;
+	// Rectangle r(5, 5);
+	// shape *pr = &r;
 	
-	std::cout << r.area() << std::endl;
-	std::cout << pr->area() << std::endl;
+	// std::cout << r.area() << std::endl;
+	// std::cout << pr->area() << std::endl;
 	
+	bool success = (rand() % 2) == 0;
+	std::cout << success << std::endl;
    return 0;
 }

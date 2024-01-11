@@ -6,48 +6,22 @@
 /*   By: bgannoun <bgannoun@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 11:39:04 by bgannoun          #+#    #+#             */
-/*   Updated: 2024/01/01 15:55:14 by bgannoun         ###   ########.fr       */
+/*   Updated: 2024/01/06 15:26:03 by bgannoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-
-class shape
-{
-	public:
-		virtual int area()
-		{
-			return (0);
-		}	
-};
-
-class Rectangle : public shape
-{
-  int length, width;
-  public:
-       Rectangle(){
-           length = 0;
-           width = 0;
-       }
-       Rectangle(int l, int w){
-           length = l;
-           width = w;
-       }
-       int area()
-       {
-          return (length * width);
-       }
-};
+#include <string>
 
 int main ()
 {
-	// Rectangle r(5, 5);
-	// shape *pr = &r;
-	
-	// std::cout << r.area() << std::endl;
-	// std::cout << pr->area() << std::endl;
-	
-	bool success = (rand() % 2) == 0;
-	std::cout << success << std::endl;
-   return 0;
+	std::string in = "-inff";
+	char *ptr;
+	double earth = std::strtof(in.c_str(), &ptr);
+	std::cout << in << std::endl;
+	std::cout << "int: " << static_cast<int>(earth) << std::endl;
+	std::cout << "char: " << static_cast<float>(earth)  << std::endl;
+	std::cout << "double: " << static_cast<double>(earth) << std::endl;
+	std::cout << ptr << std::endl;
+	return 0;
 }

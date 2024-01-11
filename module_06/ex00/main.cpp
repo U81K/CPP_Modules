@@ -5,25 +5,17 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: bgannoun <bgannoun@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/26 18:26:47 by bgannoun          #+#    #+#             */
-/*   Updated: 2024/01/03 17:13:42 by bgannoun         ###   ########.fr       */
+/*   Created: 2024/01/03 17:20:19 by bgannoun          #+#    #+#             */
+/*   Updated: 2024/01/11 18:25:53 by bgannoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include "Bureaucrat.hpp"
-#include "AForm.hpp"
-#include "ShrubberyCreationForm.hpp"
-#include "RobotomyRequestForm.hpp"
-#include "PresidentialPardonForm.hpp"
-#include "Intern.hpp"
+#include "ScalarConverte.hpp"
 
-int main(void)
+int main(int ac, char **av)
 {
-	Intern someRandomIntern;
-	AForm* rrf;
-	rrf = someRandomIntern.makeForm("robotomy request", "Bender");
-	std::cout << rrf->getGradeS() << std::endl << rrf->getGradeE() << std::endl;
-	delete rrf;
+	if (ac == 2)
+		ScalarConverte::convert(av[1]);
 	return (0);
 }

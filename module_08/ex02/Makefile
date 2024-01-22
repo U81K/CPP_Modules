@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: bgannoun <bgannoun@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/01/19 10:40:59 by bgannoun          #+#    #+#              #
-#    Updated: 2024/01/20 11:21:47 by bgannoun         ###   ########.fr        #
+#    Created: 2024/01/22 17:43:18 by bgannoun          #+#    #+#              #
+#    Updated: 2024/01/22 17:44:07 by bgannoun         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ RM			=	rm -rf
 CXXFLAGS	=	-Wall -Wextra -Werror -std=c++98
 SRCS		=	main.cpp
 OBJS		=	$(SRCS:.cpp=.o)
-INC			=	iteasyfind.hpp
+INC			=	MutantStack.hpp
 
 all			:	$(NAME)
 

@@ -68,6 +68,11 @@
 		"type_traits": "cpp",
 		"typeinfo": "cpp",
 		"__memory": "cpp",
-		"__functional_base_03": "cpp"
+		"__functional_base_03": "cpp",
+		"list": "cpp",
+		"__tree": "cpp",
+		"set": "cpp",
+		"__cxx_version": "cpp",
+		"map": "cpp"
 	}
 }

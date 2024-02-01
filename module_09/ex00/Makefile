@@ -5,17 +5,17 @@
 #                                                     +:+ +:+         +:+      #
 #    By: bgannoun <bgannoun@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/01/22 17:43:18 by bgannoun          #+#    #+#              #
-#    Updated: 2024/01/25 18:16:00 by bgannoun         ###   ########.fr        #
+#    Created: 2024/01/26 16:45:21 by bgannoun          #+#    #+#              #
+#    Updated: 2024/01/30 09:32:10 by bgannoun         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		=	a.out
+NAME		=	btc
 RM			=	rm -rf
 CXXFLAGS	=	-Wall -Wextra -Werror -std=c++98
-SRCS		=	main.cpp MutantStack.cpp
+SRCS		=	main.cpp DataBase.cpp BitcoinExchange.cpp
 OBJS		=	$(SRCS:.cpp=.o)
-INC			=	MutantStack.hpp
+INC			=	BitcoinExchange.hpp DataBase.hpp
 
 all			:	$(NAME)
 

@@ -1,33 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   MutantStack.hpp                                    :+:      :+:    :+:   */
+/*   RPN.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bgannoun <bgannoun@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/22 17:43:41 by bgannoun          #+#    #+#             */
-/*   Updated: 2024/01/25 18:19:36 by bgannoun         ###   ########.fr       */
+/*   Created: 2024/01/30 10:26:55 by bgannoun          #+#    #+#             */
+/*   Updated: 2024/02/01 12:05:39 by bgannoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MutantStack_HPP
-#define MutantStack_HPP
+#ifndef RPN_HPP
+#define RPN_HPP
 
+#include "iostream"
 #include <stack>
-#include <deque>
-#include <iostream>
-#include <vector>
+#include <sstream>
+#include <cstdlib>
 
-template<typename T>
-class MutantStack : public std::stack<T>{ 
+class rpn{
+	private:
+		rpn();
+		std::stack<double> stack;
 	public:
-		MutantStack();
-		~MutantStack();
-		MutantStack(const MutantStack &other);
-		MutantStack &operator=(const MutantStack &other);
-		typedef typename std::stack<T>::container_type::iterator iterator ;
-		iterator begin();
-		iterator end();
+		rpn(std::string input);
+		rpn(const rpn &other);
+		rpn &operator=(const rpn &other);
+		bool isNum(std::string str);
+		bool isOp(std::string token);
+		void ParseInput(std::string input);
+		~rpn();
 };
 
 #endif

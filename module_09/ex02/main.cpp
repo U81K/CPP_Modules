@@ -6,7 +6,7 @@
 /*   By: bgannoun <bgannoun@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/01 12:11:00 by bgannoun          #+#    #+#             */
-/*   Updated: 2024/02/03 17:31:41 by bgannoun         ###   ########.fr       */
+/*   Updated: 2024/04/21 10:45:32 by bgannoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,6 @@ int main(int ac, char **av){
 		exit(1);
 	}
 	PmergeMe sort(av);
-	// sort.printLIST();
+	// std::cout << "compar count = " << get_compare_count() << std::endl;
 	return(0);
 }
